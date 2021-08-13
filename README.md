@@ -13,8 +13,10 @@ Tecnologias utilizadas:
  - NodeJs
  - MySQL
  - Sequelize
+ - JavaScript
  - React
  - Redux
+ - CSS
 
 ### PASSO A PASSO PARA RODAR O APLICATIVO NA SUA MÁQUINA
 ##### OBS: Antes de iniciar, certifique-se que o MySQL esteja instalado e rodando na sua máquina.
