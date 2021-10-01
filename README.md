@@ -18,7 +18,41 @@ Tecnologias utilizadas:
  - Redux
  - CSS
 
-![Login page](./prints/login.png?raw=true "Title")
+ ### Descrição
+
+ O desafio do projeto era criar um aplicativo de delivery com todas as funcionalidades de um app real, desde a página de login até finalizar a compra.
+
+ O aplicativo se inicia na tela de login, onde será necessário colocar um login e senha válidos que serão verificados no banco de dados sua existencia. 
+
+![Login page](./prints/login.png?raw=true "Página de Login")
+
+Se não houver cadastro é possível criar um clicando no botão de "Ainda não tenho conta", você será redirecionado para a página de registro.
+
+![Registro page](./prints/registro.png?raw=true "Página de Registro")
+
+Após realizar o registro, a aplicação será redirecionada para a página principal de produtos, onde você pode colocar no carrinho os produtos e suas quantidades.
+
+![Produtos page](./prints/produtos.png?raw=true "Página de Produtos")
+
+Ao clicar no botão "Ver carrinho", você será redirecionado para o carrinho de compras, onde se encontra todos os produtos que você adicionou, podendo remover os mesmos. Abaixo na tela um form para detalhes da entrega e um botão de finalizar pedido.
+
+![Carrinho page](./prints/carrinho.png?raw=true "Página de Carrinho")
+
+Ao finalizar o pedido você é redirecionado para a página de detalhes do pedido, onde você consegue acompanhar o status do seu pedido.
+
+![Detalhes page](./prints/detalhe-pedido.png?raw=true "Página de Detalhes do Pedido")
+
+No Menu de navegação da página tem um botão "Meus Pedidos", que irá te redirecionar para a página contendo todos os seus pedidos. O botão de sair faz o logout da sua conta.
+
+![Pedidos page](./prints/meus-pedidos.png?raw=true "Página de Pedidos")
+
+### Detalhes Técnicos
+
+Ao se registrar, seus dados são salvos no banco de dados, podendo fazer login novamente sem precisar se registrar outra vez. Ao finalizar um pedido, ele também é salvo no banco de dados. Para essas requisições foi utilizado o banco de dados MySQL e o ORM Sequelize.
+
+Em toda a aplicação é utilizado padrão de token JWT.
+
+Para acompanhar o status do pedidos em tempo real foi utilizado a tecnologia Socket.io.
 
 ### PASSO A PASSO PARA RODAR O APLICATIVO NA SUA MÁQUINA
 ##### OBS: Antes de iniciar, certifique-se que o MySQL esteja instalado e rodando na sua máquina.
