@@ -18,6 +18,10 @@ Tecnologias utilizadas:
  - Redux
  - CSS
 
+ <p align="center">
+  <img src="./prints/login" width="350" title="login-page">
+</p>
+
 ### PASSO A PASSO PARA RODAR O APLICATIVO NA SUA MÁQUINA
 ##### OBS: Antes de iniciar, certifique-se que o MySQL esteja instalado e rodando na sua máquina.
 
