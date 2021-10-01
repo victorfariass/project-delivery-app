@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { getProductsCarrinho } from '../../service/getLocalStorage';
 import { setCarrinho } from '../../service/setLocalStorage';
 import { actionChangeTotalValue } from '../../redux/actions/index.action';
+import Container from './ItemTable.styled';
 
 export default function ItemTable({ prefix, orderProducts }) {
   const [getLocalData, setLocalData] = useState([]);
@@ -33,7 +34,7 @@ export default function ItemTable({ prefix, orderProducts }) {
   };
 
   return (
-    <div>
+    <Container>
       <h1>Finalizar Pedido</h1>
       <table>
         <tr>
@@ -89,7 +90,7 @@ export default function ItemTable({ prefix, orderProducts }) {
         {' '}
         {totalValue.toFixed(2).toString().replace('.', ',')}
       </span>
-    </div>
+    </Container>
   );
 }
 

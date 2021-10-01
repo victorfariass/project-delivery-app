@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { React, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import './Register.css';
 import { setUserInfo } from '../../service/setLocalStorage';
+import Container from './Register.styled';
 
 export default function Register() {
   const history = useHistory();
@@ -72,7 +72,7 @@ export default function Register() {
   }, [name.length, email, password.length]);
 
   return (
-    <div className="register">
+    <Container className="register">
       <h1 className="title">Cadastro</h1>
       <form className="register-form">
         <label htmlFor="nome">
@@ -122,6 +122,6 @@ export default function Register() {
       ) : (
         ''
       )}
-    </div>
+    </Container>
   );
 }

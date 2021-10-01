@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import { getProductsCarrinho, getUserInfo } from '../../service/getLocalStorage';
+import Container from './DeliveryForm.styled';
 
 export default function DeliveryForm() {
   const [addressUser, setAddress] = useState('');
@@ -81,7 +82,7 @@ export default function DeliveryForm() {
   }, []);
 
   const htmlCollection = () => (
-    <>
+    <Container>
       <h1>Detalhes e Endereço para Entrega</h1>
       <form>
         <label htmlFor="seller">
@@ -128,7 +129,7 @@ export default function DeliveryForm() {
           FINALIZAR PEDIDO
         </button>
       </form>
-    </>
+    </Container>
   );
 
   return (

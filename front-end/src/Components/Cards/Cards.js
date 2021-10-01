@@ -1,9 +1,9 @@
 import { React, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './Cards.css';
 import { useDispatch } from 'react-redux';
 import { setCarrinho } from '../../service/setLocalStorage';
 import { actionChangeTotalValue } from '../../redux/actions/index.action';
+import Container from './Cards.styled';
 
 export default function Cards({ product }) {
   const [quantity, setQuantity] = useState(0);
@@ -48,8 +48,8 @@ export default function Cards({ product }) {
   };
 
   return (
-    <div className="container">
-      <div className="Cards">
+    <Container>
+      <main>
         <h2 data-testid={ `customer_products__element-card-price-${id}` }>
           {price.toString().replace('.', ',')}
         </h2>
@@ -85,8 +85,8 @@ export default function Cards({ product }) {
             +
           </button>
         </div>
-      </div>
-    </div>
+      </main>
+    </Container>
   );
 }
 

@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
-import './RegisterNewUserForm.css';
 import { getUserInfo } from '../../service/getLocalStorage';
 import { requestAllUsers } from '../../redux/actions/index.action';
+import {
+  Container, Form, RegisterMessage,
+} from './RegisterNewUserForm.styled';
 
 export default function RegisterNewUserForm() {
   const dispatch = useDispatch();
@@ -87,8 +89,8 @@ export default function RegisterNewUserForm() {
   }, [name.length, email, password.length]);
 
   return (
-    <div className="container">
-      <form className="register-new-user-form">
+    <Container>
+      <Form>
         <label htmlFor="nome">
           Nome
           <input
@@ -123,7 +125,6 @@ export default function RegisterNewUserForm() {
           Tipo
           <select
             name="type"
-            className="register-new-user-select"
             data-testid="admin_manage__select-role"
             onChange={ handleRole }
             value={ role }
@@ -135,21 +136,20 @@ export default function RegisterNewUserForm() {
         </label>
         <button
           type="button"
-          className="register-new-user-button"
           data-testid="admin_manage__button-register"
           onClick={ saveNewUser }
           disabled={ isDisabled }
         >
           Cadastrar
         </button>
-      </form>
+      </Form>
       {showMessageRegister ? (
-        <p data-testid="admin_manage__element-invalid-register">
+        <RegisterMessage data-testid="admin_manage__element-invalid-register">
           Usuário já cadastrado
-        </p>
+        </RegisterMessage>
       ) : (
         ''
       )}
-    </div>
+    </Container>
   );
 }

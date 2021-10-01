@@ -3,6 +3,7 @@ import { useHistory } from 'react-router';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import { socket } from '../../socket/Socket';
+import Container from './OrderCard.styled';
 
 export default function OrderCard({ path, order, address, prefix, idPedido }) {
   const history = useHistory();
@@ -33,7 +34,7 @@ export default function OrderCard({ path, order, address, prefix, idPedido }) {
     return dateFormate;
   };
   return (
-    <button
+    <Container
       className="container"
       type="button"
       onClick={ () => history.push(`/${path}/orders/${id}`) }
@@ -70,7 +71,7 @@ export default function OrderCard({ path, order, address, prefix, idPedido }) {
           { address }
         </div>
       </div>
-    </button>
+    </Container>
   );
 }
 

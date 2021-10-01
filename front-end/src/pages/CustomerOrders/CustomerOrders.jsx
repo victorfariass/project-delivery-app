@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import NavBar from '../../Components/NavBar/NavBar';
 import OrderCard from '../../Components/OrderCard/OrderCard';
+import Container from './CustomerOrders.styled';
 
 import { requestAllOrders } from '../../redux/actions/index.action';
 
@@ -16,7 +17,7 @@ export default function CustomerOrders() {
     dispatch(requestAllOrders());
   }, [dispatch]);
   return (
-    <div>
+    <Container>
       {isLoading ? (
         <p>Loading...</p>
       ) : (
@@ -34,6 +35,6 @@ export default function CustomerOrders() {
           ))}
         </div>
       )}
-    </div>
+    </Container>
   );
 }

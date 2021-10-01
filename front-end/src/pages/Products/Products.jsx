@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import NavBar from '../../Components/NavBar/NavBar';
 import Cards from '../../Components/Cards/Cards';
+import Container from './Products.styled';
 
 import { requestAllProducts } from '../../redux/actions/index.action';
-import './Products.css';
 
 export default function Products() {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ export default function Products() {
   };
 
   return (
-    <div>
+    <Container>
       {isLoading ? (
         <p>Loading...</p>
       ) : (
@@ -48,6 +48,6 @@ export default function Products() {
           </button>
         </div>
       )}
-    </div>
+    </Container>
   );
 }

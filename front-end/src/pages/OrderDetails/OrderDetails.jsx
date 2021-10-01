@@ -6,6 +6,7 @@ import NavBar from '../../Components/NavBar/NavBar';
 import ItemTable from '../../Components/ItemTable/ItemTable';
 import { getUserInfo } from '../../service/getLocalStorage';
 import { socket } from '../../socket/Socket';
+import Container from './OrderDetails.styled';
 
 export default function OrderDetails() {
   const [isLoading, setLoading] = useState(true);
@@ -90,7 +91,7 @@ export default function OrderDetails() {
   const prefix = 'customer_order_details__';
 
   return (
-    <div>
+    <Container>
       <NavBar label="PRODUTOS" text="MEUS PEDIDOS" />
       {isLoading ? (
         <p>Loading...</p>
@@ -126,6 +127,6 @@ export default function OrderDetails() {
           <ItemTable prefix={ prefix } orderProducts={ orderProducts } />
         </div>
       )}
-    </div>
+    </Container>
   );
 }
