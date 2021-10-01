@@ -22,11 +22,11 @@ Tecnologias utilizadas:
 
  O desafio do projeto era criar um aplicativo de delivery com todas as funcionalidades de um app real, desde a página de login até finalizar a compra.
 
- O aplicativo se inicia na tela de login, onde será necessário colocar um login e senha válidos que serão verificados no banco de dados sua existencia. 
+ O aplicativo se inicia na tela de login, onde será necessário colocar um login e senha válidos que serão verificados sua existência no banco de dados. 
 
 ![Login page](./prints/login.png?raw=true "Página de Login")
 
-Se não houver cadastro é possível criar um clicando no botão de "Ainda não tenho conta", você será redirecionado para a página de registro.
+Se não houver cadastro é possível criar um clicando no botão "Ainda não tenho conta", você será redirecionado para a página de registro.
 
 ![Registro page](./prints/registro.png?raw=true "Página de Registro")
 
@@ -48,7 +48,11 @@ No Menu de navegação da página tem um botão "Meus Pedidos", que irá te redi
 
 ### Detalhes Técnicos
 
-Ao se registrar, seus dados são salvos no banco de dados, podendo fazer login novamente sem precisar se registrar outra vez. Ao finalizar um pedido, ele também é salvo no banco de dados. Para essas requisições foi utilizado o banco de dados MySQL e o ORM Sequelize.
+Ao se registrar, seus dados são salvos no banco de dados, possibilitando fazer login novamente sem precisar se registrar outra vez. 
+
+Ao finalizar um pedido ele é salvo no banco de dados.
+
+Para essas requisições foi utilizado o banco de dados MySQL e o ORM Sequelize.
 
 Em toda a aplicação é utilizado padrão de token JWT.
 
