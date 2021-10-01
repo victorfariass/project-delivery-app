@@ -16,7 +16,9 @@ Tecnologias utilizadas:
  - JavaScript
  - React
  - Redux
- - CSS
+ - Styled Components
+ - JWT
+ - Socket.io
 
  ### Descrição
 
